@@ -1,0 +1,39 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class MissionCard extends React.Component {
+  render() {
+    const { name, year, country, destination } = this.props;
+    return (
+      <div data-testid="mission-card">
+        <h4 data-testid="mission-name">
+          { name }
+        </h4>
+        <h5 data-testid="mission-year">
+          { year }
+        </h5>
+        <h5 data-testid="mission-country">
+          { country }
+        </h5>
+        <h5 data-testid="mission-destination">
+          { destination }
+        </h5>
+      </div>);
+  }
+}
+
+MissionCard.propTypes = {
+  name: PropTypes.string,
+  year: PropTypes.number,
+  country: PropTypes.string,
+  destination: PropTypes.string,
+};
+
+MissionCard.defaultProps = {
+  name: 'Ship',
+  year: 1966,
+  country: 'USA',
+  destination: 'Space',
+};
+
+export default MissionCard;
