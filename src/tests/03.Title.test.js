@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen} from '@testing-library/react';
 import Title from '../components/Title';
-
 const headlineText = "planets";
 
 describe('3 - Crie um componente chamado `Title`', () => {
